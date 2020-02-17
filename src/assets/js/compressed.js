@@ -1,71 +1,72 @@
-! function (e, t) {
+!function (e, t) {
   "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function (e) {
     if (!e.document) throw new Error("jQuery requires a window with a document");
-    return t(e)
-  } : t(e)
+      return t(e);
+  } : t(e);
 }("undefined" != typeof window ? window : this, function (e, t) {
   function n(e) {
     var t = !!e && "length" in e && e.length,
       n = oe.type(e);
     return "function" !== n && !oe.isWindow(e) && ("array" === n || 0 === t || "number" == typeof t && t > 0 && t - 1 in e)
   }
-
   function r(e, t, n) {
     if (oe.isFunction(t)) return oe.grep(e, function (e, r) {
-      return !!t.call(e, r, e) !== n
+      return !!t.call(e, r, e) !== n;
     });
     if (t.nodeType) return oe.grep(e, function (e) {
-      return e === t !== n
+      return e === t !== n;
     });
     if ("string" == typeof t) {
       if (ge.test(t)) return oe.filter(t, e, n);
-      t = oe.filter(t, e)
+      t = oe.filter(t, e);
     }
     return oe.grep(e, function (e) {
-      return Z.call(t, e) > -1 !== n
+      return Z.call(t, e) > -1 !== n;
     })
   }
 
   function i(e, t) {
-    for (;
-      (e = e[t]) && 1 !== e.nodeType;);
-    return e
+    for (;(e = e[t]) && 1 !== e.nodeType;)
+      return e;
   }
 
   function o(e) {
     var t = {};
     return oe.each(e.match(we) || [], function (e, n) {
-      t[n] = !0
+      t[n] = !0;
     }), t
   }
 
   function s() {
-    G.removeEventListener("DOMContentLoaded", s), e.removeEventListener("load", s), oe.ready()
+    G.removeEventListener("DOMContentLoaded", s), e.removeEventListener("load", s), oe.ready();
   }
 
   function a() {
-    this.expando = oe.expando + a.uid++
+    this.expando = oe.expando + a.uid++;
   }
 
   function u(e, t, n) {
     var r;
-    if (void 0 === n && 1 === e.nodeType)
+    if (void 0 === n && 1 === e.nodeType){
       if (r = "data-" + t.replace(je, "-$&").toLowerCase(), n = e.getAttribute(r), "string" == typeof n) {
         try {
           n = "true" === n || "false" !== n && ("null" === n ? null : +n + "" === n ? +n : Se.test(n) ? oe.parseJSON(n) : n)
         } catch (e) {}
-        Ne.set(e, t, n)
-      } else n = void 0;
-    return n
+        Ne.set(e, t, n);
+      } else{ 
+        n = void 0;
+      }
+    }
+    return n;
   }
 
   function l(e, t, n, r) {
     var i, o = 1,
       s = 20,
       a = r ? function () {
-        return r.cur()
+        return r.cur();
       } : function () {
-        return oe.css(e, t, "")
+        return oe.css(e, t, "");
       },
       u = a(),
       l = n && n[3] || (oe.cssNumber[t] ? "" : "px"),
@@ -79,11 +80,12 @@
 
   function c(e, t) {
     var n = "undefined" != typeof e.getElementsByTagName ? e.getElementsByTagName(t || "*") : "undefined" != typeof e.querySelectorAll ? e.querySelectorAll(t || "*") : [];
-    return void 0 === t || t && oe.nodeName(e, t) ? oe.merge([e], n) : n
+    return void 0 === t || t && oe.nodeName(e, t) ? oe.merge([e], n) : n;
   }
 
   function f(e, t) {
-    for (var n = 0, r = e.length; r > n; n++) Ee.set(e[n], "globalEval", !t || Ee.get(t[n], "globalEval"))
+    for (var n = 0, r = e.length; r > n; n++) 
+      Ee.set(e[n], "globalEval", !t || Ee.get(t[n], "globalEval"));
   }
 
   function p(e, t, n, r, i) {
@@ -92,26 +94,26 @@
         if ("object" === oe.type(o)) oe.merge(h, o.nodeType ? [o] : o);
         else if (Re.test(o)) {
       for (s = s || d.appendChild(t.createElement("div")), a = (Oe.exec(o) || ["", ""])[1].toLowerCase(), u = Pe[a] || Pe._default, s.innerHTML = u[1] + oe.htmlPrefilter(o) + u[2], p = u[0]; p--;) s = s.lastChild;
-      oe.merge(h, s.childNodes), s = d.firstChild, s.textContent = ""
+      oe.merge(h, s.childNodes), s = d.firstChild, s.textContent = "";
     } else h.push(t.createTextNode(o));
     for (d.textContent = "", g = 0; o = h[g++];)
     if (r && oe.inArray(o, r) > -1) i && i.push(o);
       else if (l = oe.contains(o.ownerDocument, o), s = c(d.appendChild(o), "script"), l && f(s), n)
       for (p = 0; o = s[p++];) Fe.test(o.type || "") && n.push(o);
-    return d
+    return d;
   }
 
   function d() {
-    return !0
+    return !0;
   }
 
   function h() {
-    return !1
+    return !1;
   }
 
   function g() {
     try {
-      return G.activeElement
+      return G.activeElement;
     } catch (e) {}
   }
 
@@ -136,12 +138,12 @@
   }
 
   function y(e) {
-    return e.type = (null !== e.getAttribute("type")) + "/" + e.type, e
+    return e.type = (null !== e.getAttribute("type")) + "/" + e.type, e;
   }
 
   function x(e) {
     var t = Xe.exec(e.type);
-    return t ? e.type = t[1] : e.removeAttribute("type"), e
+    return t ? e.type = t[1] : e.removeAttribute("type"), e;
   }
 
   function b(e, t) {
@@ -149,10 +151,13 @@
     if (1 === t.nodeType) {
       if (Ee.hasData(e) && (o = Ee.access(e), s = Ee.set(t, o), l = o.events)) {
         delete s.handle, s.events = {};
-        for (i in l)
-          for (n = 0, r = l[i].length; r > n; n++) oe.event.add(t, i, l[i][n])
+        for (i in l){ 
+          for (n = 0, r = l[i].length; r > n; n++){ 
+            oe.event.add(t, i, l[i][n]);
+          }
+        }
       }
-      Ne.hasData(e) && (a = Ne.access(e), u = oe.extend({}, a), Ne.set(t, u))
+      Ne.hasData(e) && (a = Ne.access(e), u = oe.extend({}, a), Ne.set(t, u));
     }
   }
 
@@ -205,7 +210,7 @@
   function S(e, t) {
     return {
       get: function () {
-        return e() ? void delete this.get : (this.get = t).apply(this, arguments)
+        return e() ? void delete this.get : (this.get = t).apply(this, arguments);
       }
     }
   }
@@ -213,7 +218,7 @@
   function j(e) {
     if (e in rt) return e;
     for (var t = e[0].toUpperCase() + e.slice(1), n = nt.length; n--;)
-      if (e = nt[n] + t, e in rt) return e
+      if (e = nt[n] + t, e in rt) return e;
   }
 
   function D(e, t, n) {
@@ -223,7 +228,7 @@
 
   function A(e, t, n, r, i) {
     for (var o = n === (r ? "border" : "content") ? 4 : "width" === t ? 1 : 0, s = 0; 4 > o; o += 2) "margin" === n && (s += oe.css(e, n + qe[o], !0, i)), r ? ("content" === n && (s -= oe.css(e, "padding" + qe[o], !0, i)), "margin" !== n && (s -= oe.css(e, "border" + qe[o] + "Width", !0, i))) : (s += oe.css(e, "padding" + qe[o], !0, i), "padding" !== n && (s += oe.css(e, "border" + qe[o] + "Width", !0, i)));
-    return s
+    return s;
   }
 
   function q(e, t, n) {
@@ -233,9 +238,9 @@
       s = "border-box" === oe.css(e, "boxSizing", !1, o);
     if (0 >= i || null == i) {
       if (i = N(e, t, o), (0 > i || null == i) && (i = e.style[t]), Ge.test(i)) return i;
-      r = s && (re.boxSizingReliable() || i === e.style[t]), i = parseFloat(i) || 0
+      r = s && (re.boxSizingReliable() || i === e.style[t]), i = parseFloat(i) || 0;
     }
-    return i + A(e, t, n || (s ? "border" : "content"), r, o) + "px"
+    return i + A(e, t, n || (s ? "border" : "content"), r, o) + "px";
   }
 
   function L(e, t) {

@@ -4185,6 +4185,7 @@ section .intro_section .slide_description_wrapper {
 .header_white .toggle_menu span:before,
 .header_white .toggle_menu span:after {
     background-color: #3c3c3c;
+    /* background-color: #52CBD0; */
 }
 
 .theme_header .toggle_menu {
@@ -4218,7 +4219,7 @@ section .intro_section .slide_description_wrapper {
     width: 24px;
     height: 2px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #52CBD0;
     content: '';
     left: 0;
     -webkit-transition: all 0.2s ease-in-out 0s;
