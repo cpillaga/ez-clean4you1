@@ -15,7 +15,6 @@ import { WarehouseComponent } from './pages/warehouse/warehouse.component';
 import { SmallComponent } from './pages/small/small.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { DeepComponent } from './pages/deep/deep.component';
-import * as JQuery from "jquery";
 
 @NgModule({
   declarations: [
