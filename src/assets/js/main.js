@@ -1,4 +1,5 @@
 //hidding menu elements that do not fit in menu width
+
 function menuHideExtraElements() {
     "use strict";
     jQuery('#more-li').remove();

@@ -10,6 +10,7 @@ import { WarehouseComponent } from './pages/warehouse/warehouse.component';
 import { SmallComponent } from './pages/small/small.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { DeepComponent } from './pages/deep/deep.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const app_routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const app_routes: Routes = [
     { path: 'small', component: SmallComponent },
     { path: 'restaurant', component: RestaurantComponent },
     { path: 'deep', component: DeepComponent },
+    { path: 'gallery', component: GalleryComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

@@ -1,44 +1,37 @@
-<header class="page_header mainpage_header header_darkgrey">
+<!-- <header class="page_header mainpage_header header_darkgrey"> -->
+<header class="page_header mainpage_header header_darkgrey table_section section_padding_10">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 text-md-center">
-                <a routerLink="home" class="logo visible-xs-block visible-sm-block">
+            <div class="col-md-3 col-xs-12">
+                <a routerLink="home" class="logo to_logo">
                     <img src="assets/images/logo3.png" alt="Pretty Press">
                 </a>
-                <!-- main nav start -->
+                <!-- header toggler -->
+                <span class="toggle_menu">
+                    <span></span>
+                </span>
+            </div>
+
+            <div class="col-md-9 text-right">
                 <nav class="mainmenu_wrapper">
                     <ul class="mainmenu nav sf-menu">
                         <li routerLinkActive="active">
                             <a routerLink="home">Home</a>
                         </li>
-
-                        <li routerLinkActive="active">
-                            <a routerLink="service">Services</a>
-                        </li>
-
-                        <li class="hidden-sm hidden-xs logo-item">
-                            <a routerLink="home" class="logo">
-                                <img src="assets/images/logo3.png" alt="Pretty Press">
-                            </a>
-                        </li>
-
                         <li routerLinkActive="active">
                             <a routerLink="about">About US</a>
                         </li>
-
-                        <!-- contacts -->
+                        <li routerLinkActive="active">
+                            <a routerLink="service">Services</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a routerLink="gallery">Gallery</a>
+                        </li>
                         <li>
                             <a routerLink="contact">Contact</a>
                         </li>
-                        <!-- eof contacts -->
-
                     </ul>
                 </nav>
-                <!-- eof main nav -->
-                <span class="toggle_menu">
-                    <span></span>
-                </span>
-
             </div>
         </div>
     </div>

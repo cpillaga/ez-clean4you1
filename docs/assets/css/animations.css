@@ -2720,6 +2720,10 @@ stretchRight
     height: 64px;
 }
 
+.zoom:hover {
+    transform: scale(1.1);
+}
+
 .box21 .box-content {
     width: 100%;
     height: 100%;

@@ -15,6 +15,7 @@ import { WarehouseComponent } from './pages/warehouse/warehouse.component';
 import { SmallComponent } from './pages/small/small.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { DeepComponent } from './pages/deep/deep.component';
+import { GalleryComponent } from './pages//gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DeepComponent } from './pages/deep/deep.component';
     SmallComponent,
     RestaurantComponent,
     DeepComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
